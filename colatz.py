@@ -2,9 +2,11 @@
 
 class Colatz:
     def __init__(self, start):
+        "Initializes Colatz object with value `start`"
         self.value = start
     
     def step(self):
+        "Perfoms one step of the traditional Colatz function"
         if self.value == 1:
             return False
         
@@ -16,6 +18,7 @@ class Colatz:
         return True
     
     def stepy(self):
+        "Perfoms one step of the reduced Colatz function"
         if self.value == 1:
             return False
 
@@ -30,9 +33,11 @@ class Colatz:
         return True
 
     def print_val(self):
+        "Prints the value contained"
         print(self.value)
 
     def binary(self):
+        "Returns a binary representation of the value"
         out = ''
         val = self.value
 
@@ -43,6 +48,7 @@ class Colatz:
         return out
     
     def collapsed_binary(self):
+        "Returns the collapsed binary representation of the value"
         bin = self.binary()
         out = ''
         isOne = True
@@ -70,15 +76,5 @@ class Colatz:
         return out
 
     def formatted_string(self):
+        "Prints a formatted string represting the value and its collapsed binary representation"
         return f'{self.value:6d}: {self.collapsed_binary()}'
-
-
-def main():
-    col = Colatz(27)
-    print(col.formatted_string())
-    while col.stepy():
-        print(col.formatted_string())
-
-
-if __name__ == '__main__':
-    main()
