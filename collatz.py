@@ -1,6 +1,5 @@
 
-
-class Colatz:
+class Collatz:
     def __init__(self, start):
         "Initializes Colatz object with value `start`"
         self.value = start

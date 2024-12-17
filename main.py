@@ -1,4 +1,4 @@
-from colatz import Colatz
+from collatz import Collatz
 import re
 
 def bin(val):
@@ -24,7 +24,7 @@ def colbin(val):
     
 
 def main():
-    col = Colatz(bin('1(10)1'))
+    col = Collatz(bin('1(10)1'))
     print(col.formatted_string())
     while col.stepy():
         print(col.formatted_string())
